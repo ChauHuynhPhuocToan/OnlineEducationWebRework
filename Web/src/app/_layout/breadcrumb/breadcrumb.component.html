@@ -1,0 +1,27 @@
+<ng-template #defaultBreadcrumb>
+  <ol class="breadcrumb">
+    <li class="breadcrumb-item">Home</li>
+    <li class="breadcrumb-item">{{pageTittle}}</li>
+  </ol>
+</ng-template>
+<section class="slider-area slider-area2">
+  <div class="slider-active">
+      <!-- Single Slider -->
+      <div class="single-slider slider-height2">
+          <div class="container">
+              <div class="row">
+                  <div class="col-xl-8 col-lg-11 col-md-12">
+                      <div class="hero__caption hero__caption2">
+                          <h1 data-animation="bounceIn" data-delay="0.2s">{{pageTittle}}</h1>
+                          <!-- breadcrumb Start-->
+                          <ng-container *ngTemplateOutlet="breadcrumTemplate || defaultBreadcrumb">
+                          </ng-container>
+                          <!-- breadcrumb End -->
+                      </div>
+                  </div>
+              </div>
+          </div>
+      </div>
+  </div>
+</section>
+
